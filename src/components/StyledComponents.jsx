@@ -1,11 +1,17 @@
 import styled from 'styled-components'
 
 export const Quote = styled.h2`
-    border-radius: 2px
+    border-radius: 2px;
     font-size: 1.5rem;
     padding: 1rem 2rem;
     margin: 1rem;
     border-left: 4px solid #FFD580;
+
+    @media screen and (max-width: 800px) {
+        padding: .8rem;
+        margin: 1rem 0;
+        font-size: 1.2rem;
+    }
 `
 
 export const Author = styled.div`
@@ -16,9 +22,17 @@ export const Author = styled.div`
     width: 400px;
     margin-left: 3rem;
     transition: background-color .3s ease;
+
     &:hover{
         background-color: #333333;
         color: #FFFFFF;
+    }
+
+    @media screen and (max-width: 800px) {
+        padding: .8rem;
+        margin: 1rem .8rem;
+        font-size: 1rem;
+        width: 200px;
     }
 `
 
@@ -35,6 +49,7 @@ export const Button = styled.button`
     background: transparent;
     border: none;
     cursor: pointer;
+
     &:hover{
         background-color: #333333;
         color: #FFFFFF;

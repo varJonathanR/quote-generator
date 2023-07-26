@@ -15,7 +15,7 @@ function App() {
       .then(read => {
         console.log(read)
         setQuote(
-          <div key={read._id}>
+          <div className='quote-container' key={read._id}>
             <Quote>&quot;{read.content}&quot;</Quote>
             <Author>
               <h3>{read.author}</h3>
@@ -34,7 +34,7 @@ function App() {
   return (
     <>
       <main>
-        <section className='section'>
+        <section className='quote-section'>
           <p className='right'>
             <Button onClick={fetchQuote}>Random <AiOutlineReload /></Button>
           </p>
